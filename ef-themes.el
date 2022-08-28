@@ -1325,7 +1325,7 @@ Helper function for `ef-themes-preview-colors'."
     `(ruler-mode-pad ((,c :inherit ruler-mode-default :background ,bg-alt :foreground ,fg-dim)))
     `(ruler-mode-tab-stop ((,c :inherit ruler-mode-default :foreground ,yellow)))
 ;;;; show-paren-mode
-    `(show-paren-match ((,c :background ,bg-paren :foreground ,fg-intense)))
+    `(show-paren-match ((,c :background ,bg-hover :foreground ,fg-intense)))
     `(show-paren-match-expression ((,c :background ,bg-alt)))
     `(show-paren-mismatch ((,c :background ,bg-red :foreground ,fg-intense)))
 ;;;; shell-script-mode (sh-mode)
