@@ -1348,6 +1348,17 @@ Helper function for `ef-themes-preview-colors'."
     `(smerge-refined-changed (( )))
     `(smerge-refined-removed ((,c :inherit diff-refine-removed)))
     `(smerge-upper ((,c :inherit diff-removed)))
+;;;; solaire-mode
+    `(solaire-default-face ((,c :inherit default :background ,bg-dim :foreground ,fg-main)))
+    `(solaire-line-number-face ((,c :inherit solaire-default-face :foreground ,fg-dim)))
+    `(solaire-hl-line-face ((,c :background ,bg-active)))
+    `(solaire-org-hide-face ((,c :background ,bg-dim :foreground ,bg-dim)))
+;;;; git-gutter
+    `(git-gutter:added ((,c :foreground ,bg-green)))
+    `(git-gutter:modified ((,c :foreground ,bg-yellow)))
+    `(git-gutter:deleted ((,c :foreground ,bg-red)))
+    `(corfu-current ((,c :background ,bg-hl-line)))
+    `(vertico-current ((,c :background ,bg-hl-line)))
 ;;;; tab-bar-mode
     `(tab-bar ((,c :inherit ef-themes-ui-variable-pitch :background ,bg-alt)))
     `(tab-bar-tab-group-current ((,c :inherit bold :background ,bg-main :box (:line-width -2 :color ,bg-main) :foreground ,fg-alt)))
