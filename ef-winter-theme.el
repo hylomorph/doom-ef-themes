@@ -1,4 +1,4 @@
-;;; ef-winter-theme.el --- Legible dark theme -*- lexical-binding:t -*-
+;;; ef-winter-theme.el --- Legible dark theme with magenta, purple, fawn, teal colors -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2022  Free Software Foundation, Inc.
 
@@ -37,7 +37,7 @@
 (eval-and-compile
   (require 'ef-themes)
 
-  (deftheme ef-winter "Legible dark theme.")
+  (deftheme ef-winter "Legible dark theme with magenta, purple, fawn, teal colors.")
 
   (defconst ef-winter-palette
     '(;; Basic tones
@@ -60,7 +60,7 @@
       (green-warmer    "#6aad0f")
       (green-cooler    "#00a392")
       (green-faint     "#61a06c")
-      (yellow          "#c48052")
+      (yellow          "#b58a52")
       (yellow-warmer   "#d1803f")
       (yellow-cooler   "#df9080")
       (yellow-faint    "#c0a38a")
@@ -82,8 +82,15 @@
       (bg-green    "#20a020")
       (bg-yellow   "#845020")
       (bg-blue     "#3633b0")
-      (bg-magenta  "#c040cf")
+      (bg-magenta  "#b04fcf")
       (bg-cyan     "#2270be")
+
+      (bg-red-subtle      "#6a002a")
+      (bg-green-subtle    "#00422a")
+      (bg-yellow-subtle   "#5a3000")
+      (bg-blue-subtle     "#242679")
+      (bg-magenta-subtle  "#50105a")
+      (bg-cyan-subtle     "#004065")
 
       ;; Diffs
       (bg-added          "#002d1f")
@@ -117,7 +124,7 @@
       (bg-accent     "#ffb250") (fg-accent     "#000000")
       (bg-completion "#2f2a7a")
       (bg-hover      "#00474f")
-      (bg-hover-alt  "#600f5a")
+      (bg-hover-alt  "#44196f")
       (bg-hl-line    "#003045")
       (bg-region     "#342464")
       (bg-paren      "#2f608e")
@@ -129,9 +136,17 @@
       (cursor        "#ff6ff0")
       (fg-intense    "#ffffff")
 
+      (modeline-err     "#ff9fbf")
+      (modeline-warning "#ddb300")
+      (modeline-info    "#40e0af")
+
+      (underline-err     "#df2f2f")
+      (underline-warning "#c0b000")
+      (underline-info    "#22b022")
+
       ;; Mappings
       (err red-warmer)
-      (warning yellow-warmer)
+      (warning yellow)
       (info green)
 
       (link magenta)
@@ -139,6 +154,7 @@
       (date cyan-cooler)
       (name magenta)
       (keybind cyan-cooler)
+      (prompt magenta-warmer)
 
       (builtin magenta-warmer)
       (comment yellow-faint)
@@ -167,14 +183,14 @@
       (mail-5 green)
 
       (rainbow-0 magenta)
-      (rainbow-1 green-cooler)
+      (rainbow-1 cyan-cooler)
       (rainbow-2 magenta-cooler)
       (rainbow-3 yellow)
-      (rainbow-4 blue)
-      (rainbow-5 green-warmer)
-      (rainbow-6 red-cooler)
-      (rainbow-7 cyan)
-      (rainbow-8 magenta-warmer))
+      (rainbow-4 blue-warmer)
+      (rainbow-5 magenta-warmer)
+      (rainbow-6 green-cooler)
+      (rainbow-7 yellow-cooler)
+      (rainbow-8 cyan-warmer))
     "The `ef-winter' palette.")
 
   (ef-themes-theme ef-winter ef-winter-palette)

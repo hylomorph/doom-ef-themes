@@ -1,4 +1,4 @@
-;;; ef-spring-theme.el --- Legible light theme -*- lexical-binding:t -*-
+;;; ef-spring-theme.el --- Legible light theme with cool, varied colors (green, cyan, red) -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2022  Free Software Foundation, Inc.
 
@@ -37,7 +37,7 @@
 (eval-and-compile
   (require 'ef-themes)
 
-  (deftheme ef-spring "Legible light theme.")
+  (deftheme ef-spring "Legible light theme with cool, varied colors (green, cyan, red).")
 
   (defconst ef-spring-palette
     '(;; Basic tones
@@ -82,21 +82,28 @@
       (bg-green    "#6fdf30")
       (bg-yellow   "#efcf00")
       (bg-blue     "#afdfff")
-      (bg-magenta  "#ff90fe")
+      (bg-magenta  "#df8fff")
       (bg-cyan     "#88cfe0")
 
+      (bg-red-subtle      "#ffcfbf")
+      (bg-green-subtle    "#afffbf")
+      (bg-yellow-subtle   "#fff576")
+      (bg-blue-subtle     "#ccdfff")
+      (bg-magenta-subtle  "#ffddff")
+      (bg-cyan-subtle     "#bfefff")
+
       ;; Diffs
-      (bg-added          "#dfffe0")
-      (bg-added-faint    "#e0ffea")
-      (bg-added-refine   "#c3efd3")
+      (bg-added          "#c9ffda")
+      (bg-added-faint    "#d7ffe5")
+      (bg-added-refine   "#b3efcf")
 
-      (bg-changed        "#ffe0b9")
+      (bg-changed        "#ffdfb9")
       (bg-changed-faint  "#ffefcb")
-      (bg-changed-refine "#ffcf9f")
+      (bg-changed-refine "#ffcfa0")
 
-      (bg-removed        "#ffe4dd")
-      (bg-removed-faint  "#ffefea")
-      (bg-removed-refine "#ffcdc0")
+      (bg-removed        "#ffd6e0")
+      (bg-removed-faint  "#ffe9e6")
+      (bg-removed-refine "#f5bfc8")
 
       ;; Graphs
       (red-graph-0-bg     "#ef7969")
@@ -117,7 +124,7 @@
       (bg-accent     "#880044") (fg-accent     "#ffffff")
       (bg-completion "#ccedff")
       (bg-hover      "#ffc09f")
-      (bg-hover-alt  "#feb5ff")
+      (bg-hover-alt  "#f0bfff")
       (bg-hl-line    "#f9e0e5")
       (bg-region     "#d0e6ff")
       (bg-paren      "#7fddd0")
@@ -126,12 +133,20 @@
       (bg-info       "#ccf5dd") ; check with info
 
       (border        "#b4c4c0")
-      (cursor        "#bf0040")
+      (cursor        "#bf005f")
       (fg-intense    "#000000")
+
+      (modeline-err     "#9f0030")
+      (modeline-warning "#5f0f9f")
+      (modeline-info    "#1240af")
+
+      (underline-err     "#ef0f1f")
+      (underline-warning "#bf5f00")
+      (underline-info    "#02af52")
 
       ;; Mappings
       (err red-warmer)
-      (warning yellow-warmer)
+      (warning yellow)
       (info green)
 
       (link cyan-cooler)
@@ -139,6 +154,7 @@
       (date cyan)
       (name green-cooler)
       (keybind magenta-warmer)
+      (prompt green)
 
       (builtin green)
       (comment yellow-faint)

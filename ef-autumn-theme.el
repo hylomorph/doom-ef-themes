@@ -1,4 +1,4 @@
-;;; ef-autumn-theme.el --- Legible dark theme -*- lexical-binding:t -*-
+;;; ef-autumn-theme.el --- Legible dark theme with warm, varied colors (red, yellow, green, teal) -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2022  Free Software Foundation, Inc.
 
@@ -37,7 +37,7 @@
 (eval-and-compile
   (require 'ef-themes)
 
-  (deftheme ef-autumn "Legible dark theme.")
+  (deftheme ef-autumn "Legible dark theme with warm, varied colors (red, yellow, green, teal).")
 
   (defconst ef-autumn-palette
     '(;; Basic tones
@@ -82,8 +82,15 @@
       (bg-green    "#20a020")
       (bg-yellow   "#9a4f20")
       (bg-blue     "#3f43af")
-      (bg-magenta  "#c040cf")
+      (bg-magenta  "#b04fcf")
       (bg-cyan     "#027080")
+
+      (bg-red-subtle      "#77002a")
+      (bg-green-subtle    "#00422a")
+      (bg-yellow-subtle   "#693200")
+      (bg-blue-subtle     "#242679")
+      (bg-magenta-subtle  "#611062")
+      (bg-cyan-subtle     "#004065")
 
       ;; Diffs
       (bg-added          "#172c0f")
@@ -117,10 +124,10 @@
       (bg-accent     "#ffa200") (fg-accent     "#000000")
       (bg-completion "#36213a")
       (bg-hover      "#265f4a")
-      (bg-hover-alt  "#6f345a")
+      (bg-hover-alt  "#55345a")
       (bg-hl-line    "#302a3a")
       (bg-region     "#3f1020")
-      (bg-paren      "#7f2d40")
+      (bg-paren      "#2f6c4a")
       (bg-err        "#361400") ; check with err
       (bg-warning    "#332800") ; check with warning
       (bg-info       "#152800") ; check with info
@@ -129,9 +136,17 @@
       (cursor        "#ffaa33")
       (fg-intense    "#ffffff")
 
+      (modeline-err     "#ff9fbf")
+      (modeline-warning "#dfcf33")
+      (modeline-info    "#4fdf5f")
+
+      (underline-err     "#df2f2f")
+      (underline-warning "#c0b000")
+      (underline-info    "#22b022")
+
       ;; Mappings
       (err red-warmer)
-      (warning yellow-warmer)
+      (warning yellow)
       (info green-cooler)
 
       (link yellow)
@@ -139,6 +154,7 @@
       (date yellow-cooler)
       (name green-warmer)
       (keybind red-warmer)
+      (prompt cyan-cooler)
 
       (builtin red-cooler)
       (comment yellow-faint)
